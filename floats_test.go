@@ -231,6 +231,15 @@ func TestDivTo(t *testing.T) {
 	}
 }
 
+func TestDivConst(t *testing.T) {
+	s := []float64{5, 15, 25}
+	truth := []float64{1, 3, 5}
+
+	DivConst(5, s)
+
+	AreSlicesEqual(t, truth, s, "Wrong division of constant")
+}
+
 func TestDot(t *testing.T) {
 	s1 := []float64{1, 2, 3, 4}
 	s2 := []float64{-3, 4, 5, -6}

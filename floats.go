@@ -171,6 +171,13 @@ func DivTo(dst []float64, s []float64, t []float64) []float64 {
 	return dst
 }
 
+// DivConst all of the values in s by the value c.
+func DivConst(c float64, s []float64) {
+	for i := range s {
+		s[i] /= c
+	}
+}
+
 // Dot computes the dot product of s1 and s2, i.e.
 // sum_{i = 1}^N s1[i]*s2[i].
 // A panic will occur if lengths of arguments do not match.
