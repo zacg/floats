@@ -576,3 +576,14 @@ func Sum(s []float64) (sum float64) {
 	}
 	return
 }
+
+//Returns subset of specified indices
+func SubSet(s []float64, indices []int) []float64 {
+	result := make([]float64, len(indices))
+
+	for idx, val := range indices {
+		result[idx] = s[val]
+	}
+
+	return result
+}

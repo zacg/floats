@@ -775,6 +775,16 @@ func TestSum(t *testing.T) {
 	}
 }
 
+func TestSubSet(t *testing.T) {
+	s := []float64{5, 15, 25, 30, 35, 40}
+	truth := []float64{25, 35, 40}
+	indices := []int{2, 4, 5}
+
+	result := SubSet(s, indices)
+
+	AreSlicesEqual(t, truth, result, "Unexpected subset")
+}
+
 func RandomSlice(l int) []float64 {
 	s := make([]float64, l)
 	for i := range s {
